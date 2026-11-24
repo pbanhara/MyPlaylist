@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPlaylist | Playlists</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">♫ MyPlaylist</a>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="biblioteca.html">Biblioteca</a>
+        <a href="playlists.html" class="active">Playlists</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="page-heading">
+        <span class="tag">SUAS COLEÇÕES</span>
+        <h1>Minhas playlists</h1>
+        <p>Crie coleções musicais para cada momento.</p>
+    </section>
+
+    <section class="panel">
+        <h2>Criar playlist</h2>
+
+        <form id="form-playlist">
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nome-playlist">Nome da playlist</label>
+                    <input type="text" id="nome-playlist" placeholder="Ex: Minhas favoritas" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao-playlist">Descrição</label>
+                    <input type="text" id="descricao-playlist" placeholder="Ex: Músicas para relaxar">
+                </div>
+            </div>
+
+            <button type="submit" class="button">Criar playlist</button>
+
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Adicionar músicas</h2>
+
+        <form id="form-adicionar-playlist">
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="selecionar-playlist">Escolha uma playlist</label>
+                    <select id="selecionar-playlist" required>
+                        <option value="">Selecione uma playlist</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="selecionar-musica">Escolha uma música</label>
+                    <select id="selecionar-musica" required>
+                        <option value="">Selecione uma música</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="button">Adicionar à playlist</button>
+
+        </form>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <h2>Suas coleções</h2>
+                <p>Playlists criadas por você.</p>
+            </div>
+        </div>
+
+        <div id="lista-playlists" class="playlist-grid"></div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <h2>Músicas da playlist selecionada</h2>
+                <p>Confira as músicas da sua coleção.</p>
+            </div>
+        </div>
+
+        <div id="conteudo-playlist" class="music-grid">
+            <p class="empty-message">Selecione uma playlist para visualizar suas músicas.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    MyPlaylist © 2026 — De Banhara e Furquim para os amantes da música.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPlaylist | Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">♫ MyPlaylist</a>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="biblioteca.html" class="active">Biblioteca</a>
+        <a href="playlists.html">Playlists</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="page-heading">
+        <span class="tag">SUA COLEÇÃO</span>
+        <h1>Sua biblioteca</h1>
+        <p>Cadastre e organize suas músicas favoritas.</p>
+    </section>
+
+    <section class="panel">
+        <h2>Adicionar música</h2>
+
+        <form id="form-musica">
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nome-musica">Nome da música</label>
+                    <input type="text" id="nome-musica" placeholder="Ex: Numb" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="artista-musica">Artista</label>
+                    <input type="text" id="artista-musica" placeholder="Ex: Linkin Park" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="album-musica">Álbum</label>
+                    <input type="text" id="album-musica" placeholder="Ex: Meteora">
+                </div>
+
+                <div class="form-group">
+                    <label for="genero-musica">Gênero</label>
+                    <select id="genero-musica" required>
+                        <option value="">Selecione um gênero</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Indie">Indie</option>
+                        <option value="Rap">Rap</option>
+                        <option value="Eletrônica">Eletrônica</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="button">Adicionar música</button>
+
+        </form>
+    </section>
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Minha coleção</h2>
+                <p id="contador-biblioteca">0 músicas cadastradas</p>
+            </div>
+        </div>
+
+        <div class="filters">
+            <input type="search" id="pesquisa" placeholder="Pesquisar música ou artista...">
+
+            <select id="filtro-genero">
+                <option value="todos">Todos os gêneros</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Indie">Indie</option>
+                <option value="Rap">Rap</option>
+                <option value="Eletrônica">Eletrônica</option>
+                <option value="Outro">Outro</option>
+            </select>
+        </div>
+
+        <div id="lista-musicas" class="music-grid"></div>
+
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <h2>Minhas favoritas</h2>
+                <p>As músicas que você marcou com estrela.</p>
+            </div>
+        </div>
+
+        <div id="lista-favoritas" class="music-grid"></div>
+    </section>
+
+</main>
+
+<footer>
+    MyPlaylist © 2026 — De Banhara e Furquim para os amantes da música.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,479 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #101014;
+    --surface: #19191f;
+    --surface-light: #22222b;
+    --purple: #9865f5;
+    --purple-light: #b18bff;
+    --text: #f5f3fa;
+    --muted: #a5a1b0;
+    --border: #30303a;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    min-height: 75px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background: #15151b;
+}
+
+.logo {
+    color: var(--purple-light);
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--purple-light);
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex: 1;
+}
+
+.hero {
+    min-height: 300px;
+    padding: 55px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #29203b, #19151f 70%, #302044);
+    border: 1px solid #403052;
+}
+
+.tag {
+    color: var(--purple-light);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin: 18px 0 12px;
+}
+
+.hero h1 span {
+    color: var(--purple-light);
+}
+
+.hero p,
+.page-heading p,
+.section-heading p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    background: var(--purple);
+    color: white;
+    padding: 13px 20px;
+    margin-top: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: var(--purple-light);
+    transform: translateY(-2px);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 30px 0 50px;
+}
+
+.stat-card {
+    background: var(--surface);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.stat-card h2 {
+    font-size: 32px;
+    color: var(--purple-light);
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.section {
+    margin: 45px 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.section-heading h2,
+.panel h2 {
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    font-size: 14px;
+}
+
+.text-link {
+    color: var(--purple-light);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.page-heading {
+    margin: 20px 0 35px;
+}
+
+.page-heading h1 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px;
+    border-radius: 14px;
+    margin: 25px 0;
+}
+
+.panel h2 {
+    margin-bottom: 22px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    background: var(--surface-light);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--purple);
+}
+
+input::placeholder {
+    color: #777381;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.music-grid,
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.music-card,
+.playlist-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 0;
+    transition: 0.2s;
+}
+
+.music-card:hover,
+.playlist-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-3px);
+}
+
+.music-card h3,
+.playlist-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.music-card p,
+.playlist-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.music-genre {
+    display: inline-block;
+    background: #33264b;
+    color: var(--purple-light);
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 9px;
+    margin-top: 16px;
+}
+
+.small-button {
+    background: var(--surface-light);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 11px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.small-button:hover {
+    border-color: var(--purple);
+}
+
+.favorite-button {
+    color: #f6cb61;
+}
+
+.delete-button {
+    color: #ff8585;
+}
+
+.empty-message {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 20px 0;
+    grid-column: 1 / -1;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 25px 15px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .music-grid,
+    .playlist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 17px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 22px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .hero {
+        padding: 30px 22px;
+        min-height: 280px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .form-grid,
+    .filters,
+    .music-grid,
+    .playlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+}
+
+
+.botao-favorito,
+.botao-excluir {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.botao-favorito {
+    background-color: #8b5cf6;
+    color: white;
+}
+
+.botao-favorito:hover {
+    background-color: #7c3aed;
+}
+
+.botao-excluir {
+    background-color: #2a2933;
+    color: #ff7070;
+    border: 1px solid #ff7070;
+}
+
+.botao-excluir:hover {
+    background-color: #ff7070;
+    color: white;
+}
+
+
+.cartao-playlist {
+    background-color: #19181f;
+    border: 1px solid #302e39;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.cartao-playlist button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-right: 8px;
+    background-color: #8b5cf6;
+    color: white;
+}
+
+.cartao-playlist button:hover {
+    background-color: #7c3aed;
+}
+
+.cartao-musica-playlist {
+    background-color: #19181f;
+    border: 1px solid #302e39;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 16px;
+}
+
+.botao-remover-playlist {
+    background-color: #2a2933;
+    color: #ff7070;
+    border: 1px solid #ff7070;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    width: auto;
+}
+
+.botao-remover-playlist:hover {
+    background-color: #ff7070;
+    color: white;
+}

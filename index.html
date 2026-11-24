@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPlaylist | Início</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">♫ MyPlaylist</a>
+
+    <nav>
+        <a href="index.html" class="active">Início</a>
+        <a href="biblioteca.html">Biblioteca</a>
+        <a href="playlists.html">Playlists</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag">SUA MÚSICA, SUA COLEÇÃO</span>
+            <h1>Bem-vindo ao <span>MyPlaylist.</span></h1>
+            <p>Organize suas músicas e crie playlists do seu jeito.</p>
+            <a href="biblioteca.html" class="button">Explorar biblioteca</a>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <h2 id="total-musicas">0</h2>
+            <p>Músicas cadastradas</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="total-playlists">0</h2>
+            <p>Playlists criadas</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="total-favoritas">0</h2>
+            <p>Músicas favoritas</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <h2>Suas músicas</h2>
+                <p>Confira algumas músicas da sua biblioteca.</p>
+            </div>
+            <a href="biblioteca.html" class="text-link">Ver biblioteca →</a>
+        </div>
+
+        <div id="musicas-inicio" class="music-grid"></div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <h2>Suas playlists</h2>
+                <p>Suas coleções musicais.</p>
+            </div>
+            <a href="playlists.html" class="text-link">Ver playlists →</a>
+        </div>
+
+        <div id="playlists-inicio" class="playlist-grid"></div>
+    </section>
+
+</main>
+
+<footer>
+    MyPlaylist © 2026 — De Banhara e Furquim para os amantes da música.
+</footer>
+
+</body>
+</html>
